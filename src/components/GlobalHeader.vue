@@ -1,25 +1,22 @@
 <template>
-  <header class="global-header">
-    <nav class="navigation">
-      <ul>
-        <li><RouterLink to="/">Home</RouterLink></li>
-        <li><RouterLink to="/websites">Websites</RouterLink></li>
-        <li><RouterLink to="/tarieven">Tarieven</RouterLink></li>
-        <li><RouterLink to="/contact">Contact</RouterLink></li>
-        <li><RouterLink to="/offerte">Offerte</RouterLink></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="top-nav">
+    <div class="nav-item">Home</div>
+    <div class="nav-item">Websites</div>
+    <div class="nav-item">Tarieven</div>
+    <div class="nav-item">Contact</div>
+    <div class="nav-item">Offerte</div>
+  </nav>
 </template>
 
 <style scoped>
-.global-header {
-  /* Styles for the header */
-}
-.navigation ul {
+.top-nav {
   display: flex;
-  list-style: none;
-  /* More styles */
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #000;
 }
-/* Rest of the styles */
+
+.nav-item {
+  padding: 1rem;
+}
 </style>
