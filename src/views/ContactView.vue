@@ -13,7 +13,5 @@ import GlobalHeader from '../components/GlobalHeader.vue'
 </script>
 
 <style scoped>
-.contact-form {
-  /* Styles for contact form */
-}
+
 </style>

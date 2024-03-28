@@ -13,7 +13,5 @@ import GlobalHeader from '../components/GlobalHeader.vue'
 </script>
 
 <style scoped>
-.offerte-form {
-  /* Styles for offerte form */
-}
+
 </style>
