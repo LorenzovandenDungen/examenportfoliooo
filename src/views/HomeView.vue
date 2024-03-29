@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <h1>Heading</h1>
+    <h2>Startende Ondernemers</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <div class="buttons">
       <button>Contact</button>
