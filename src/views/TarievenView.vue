@@ -13,7 +13,5 @@ import GlobalHeader from '../components/GlobalHeader.vue'
 </script>
 
 <style scoped>
-.tarieven-section {
-  /* Styles for tarieven section */
-}
+
 </style>
