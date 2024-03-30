@@ -1,47 +1,73 @@
 <template>
-    <div class="container">
-      <!-- Header with navigation links -->
-      <header class="header">
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Websites</a></li>
-            <li><a href="#">Tarieven</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Offerte</a></li>
-          </ul>
-        </nav>
-      </header>
-  
-      <!-- Main content area -->
-      <div class="main-content">
-        <h1>Heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div class="image-placeholder">Afbeelding</div>
-        <div class="buttons">
-          <button>Contact</button>
-          <button>Offerte</button>
-        </div>
-        <div class="content-box">
-          <h2>Websites laten maken?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="content-box">
-          <h2>Contact</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="content-box">
-          <h2>Tarieven</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
+  <div class="container">
+    <!-- Header with navigation links -->
+    <header class="header">
+      <nav>
+        <ul class="nav-links">
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/websites">Websites</router-link></li>
+          <li><router-link to="/tarieven">Tarieven</router-link></li>
+          <li><router-link to="/contact">Contact</router-link></li>
+          <li><router-link to="/offerte">Offerte</router-link></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content area -->
+    <div class="main-content">
+      <h1>Heading</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="image-placeholder">Afbeelding</div>
+      <div class="buttons">
+        <button @click="contactButtonClicked">Contact</button>
+        <button @click="offerteButtonClicked">Offerte</button>
       </div>
-  
-      <!-- Footer area -->
-      <footer class="footer">
-        <p>Footer</p>
-      </footer>
+      <div class="content-box">
+        <h2>Websites laten maken?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="content-box">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="content-box">
+        <h2>Tarieven</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
     </div>
-  </template>
+
+    <!-- Footer area -->
+    <footer class="footer">
+      <p>Footer</p>
+    </footer>
+  </div>
+</template>
+
+<script>
+import { useRouter } from 'vue-router';
+
+export default {
+  setup() {
+    const router = useRouter();
+
+    const contactButtonClicked = () => {
+      console.log('Contact knop geklikt!');
+      router.push('/contact');
+    };
+
+    const offerteButtonClicked = () => {
+      console.log('Offerte knop geklikt!');
+      router.push('/offerte');
+    };
+
+    return {
+      contactButtonClicked,
+      offerteButtonClicked,
+    };
+  },
+};
+</script>
+
   
   <style scoped>
   .container {
